@@ -1,0 +1,29 @@
+package com.cooler.ai.platform.model;
+
+import com.cooler.ai.platform.entity.ConditionLogic;
+import com.cooler.ai.platform.entity.ConditionRule;
+
+/**
+ * Created by zhangsheng on 2018/12/12.
+ */
+public interface ConditionData<V> {
+
+    ConditionRule getConditionRule();
+
+    ConditionLogic getConditionLogic();
+
+    Integer getParamType();
+
+    String getParamsName();
+
+    V getValue();
+
+    float getBelief();
+
+    Boolean getResult();
+
+    void setResult(Boolean result);
+
+    boolean isNecessary();                      //如果此数据为槽位变量下的值才有意义，标示是否为必须槽位
+
+}

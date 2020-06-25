@@ -1,0 +1,24 @@
+package com.cooler.ai.platform.service.external;
+
+import com.cooler.ai.platform.entity.ConditionLogic;
+import com.cooler.ai.platform.entity.ConditionRule;
+import com.cooler.ai.platform.facade.model.BizDataModelState;
+import com.cooler.ai.platform.facade.model.DMRequest;
+import com.cooler.ai.platform.facade.model.DialogState;
+import com.cooler.ai.platform.model.ConditionData;
+
+import java.util.Map;
+
+/**
+ * Created by zhangsheng on 2018/12/12.
+ */
+public interface ConditionContextService {
+
+    /**
+     * 通过标示获取业务中的被检测数据
+     * @param conditionRule
+     * @param dialogState
+     * @return
+     */
+    ConditionData getConditionData(ConditionRule conditionRule, ConditionLogic conditionLogic, DMRequest dmRequest, DialogState dialogState, boolean isHadBePreprocessed, Map<String, BizDataModelState<String>> bizDataMSMap);
+}
